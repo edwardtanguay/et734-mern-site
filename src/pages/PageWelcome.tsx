@@ -1,5 +1,12 @@
+import { useState } from "react";
+import { IEmployee } from "../interfaces";
+
 export const PageWelcome = () => {
+	const [employees, setEmployees] = useState<IEmployee[]>([]);
+
 	return (
-		<p>This is the welcome page.</p>
+		<>
+			<h2>There are {employees.length} employees:</h2>
+		</>
 	)
 }
