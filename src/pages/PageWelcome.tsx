@@ -18,7 +18,21 @@ export const PageWelcome = () => {
 
 	return (
 		<>
-			<h2>There are {employees.length} employees:</h2>
+			<h2 className="text-xl mb-3">
+				There are {employees.length} employees:
+			</h2>
+			<ul className="list-disc ml-6 ">
+				{employees.map((employee) => {
+					return (
+						<li key={employee.employeeID}>
+							<span className="font-semibold">
+								{employee.firstName} {employee.lastName}
+							</span>
+							- {employee.title}
+						</li>
+					);
+				})}
+			</ul>
 		</>
 	);
 };
