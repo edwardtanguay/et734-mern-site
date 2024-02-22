@@ -11,3 +11,17 @@
 a.active {
 	color: rgb(232, 232, 141);
 }
+
+body {
+	animation: fadein .3s ease-in;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
